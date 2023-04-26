@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  go-application:
+    container_name: go-application
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_Username=admin
+      - DB_Password=admin1234
+      - DB_Port=3306
+      - DB_Host=database-1.c2mdsmhjfcaw.ap-southeast-2.rds.amazonaws.com
+      - DB_Name=crud_go
+    restart: on-failure
