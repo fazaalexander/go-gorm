@@ -30,7 +30,6 @@ type Config struct {
 }
 
 func InitDB() {
-	// ...
 	erro := godotenv.Load("../.env")
 	if erro != nil {
 		log.Fatal("Error loading .env file")
