@@ -23,7 +23,7 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
         script: |
-          ls -la
+          export PATH=$PATH:/usr/local/go/bin
           cd go-app
           git pull
           go build .
